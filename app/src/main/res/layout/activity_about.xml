@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+    This file is part of TraQuad-project's software, version Alpha (unstable release).
+
+    TraQuad-project's software is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    TraQuad-project's software is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with TraQuad-project's software.  If not, see <http://www.gnu.org/licenses/>.
+
+    Additional term: Clause 7(b) of GPLv3. Attribution is (even more) necessary if these (TraQuad-project's) softwares are distributed commercially.
+    Date of creation: June 2015 - June 2016 and Attribution: Prasad N R as a representative of (unregistered) company TraQuad.
+
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:id="@+id/imageView">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="\nTraQuad Project"
+        android:id="@+id/textView12"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_marginLeft = "25dp"
+        android:layout_marginRight = "25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="\n TraQuad is a low-cost autonomous imaging based 'follow anything' quadcopter capable of tracking people, cars and almost any moving object. TraQuad is an official college project of the team of TraQuad, Electronics and Communication, MSRIT.\n\n"
+        android:id="@+id/textView13"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@android:color/black" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_gravity="center_horizontal"
+
+        >
+
+       <LinearLayout
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textAppearance="?android:attr/textAppearanceLarge"
+               android:text="\nTraQuad Team\n"
+               android:id="@+id/textView14"
+               android:layout_gravity="center_horizontal" />
+
+           <ImageButton
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/imageButton"
+               android:src="@drawable/amith"
+               android:layout_gravity="center_horizontal" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textAppearance="?android:attr/textAppearanceLarge"
+               android:text="Amith A Lawrence"
+               android:id="@+id/textView14"
+               android:layout_gravity="center_horizontal" />
+
+           <TextView
+
+               android:layout_marginLeft = "25dp"
+               android:layout_marginRight = "25dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textAppearance="?android:attr/textAppearanceSmall"
+               android:text="\nAmith is from Bangalore and is planning to pursue his higher studies in the field of analog VLSI and its implementation for Image Processing algorithms. He has experience on MSP430 programming, Basic embedded systems, Speech Processing Robotics and Digital Logic verification.\n\n"
+               android:id="@+id/textView14"
+               android:layout_gravity="center_horizontal"
+               android:gravity="center"/>
+
+
+
+           <ImageButton
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/imageButton"
+               android:src="@drawable/harsha"
+               android:layout_gravity="center_horizontal" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textAppearance="?android:attr/textAppearanceLarge"
+               android:text="Harsha H N"
+               android:id="@+id/textView14"
+               android:layout_gravity="center_horizontal" />
+
+           <TextView
+
+               android:layout_marginLeft = "25dp"
+               android:layout_marginRight = "25dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textAppearance="?android:attr/textAppearanceSmall"
+               android:text="\nHarsha's interest lies in developing consumer electronic products. He has attended several workshops to hone his skills. He is a technophile and a fitness enthusiast. He is interested in entrepreneurship and is working towards it!\n\n"
+               android:id="@+id/textView14"
+               android:layout_gravity="center_horizontal"
+               android:gravity="center"/>
+
+
+
+           <ImageButton
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/imageButton"
+               android:src="@drawable/amrinderresize"
+               android:layout_gravity="center_horizontal" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textAppearance="?android:attr/textAppearanceLarge"
+               android:text="Amrinder Singh Randhawa"
+               android:id="@+id/textView14"
+               android:layout_gravity="center_horizontal" />
+
+           <TextView
+
+               android:layout_marginLeft = "25dp"
+               android:layout_marginRight = "25dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textAppearance="?android:attr/textAppearanceSmall"
+               android:text="\nAmrinder is interested in VLSI and digital system design. He is currently working on image processing.\n\n"
+               android:id="@+id/textView14"
+               android:layout_gravity="center_horizontal"
+               android:gravity="center"/>
+
+
+
+           <ImageButton
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/imageButton"
+               android:src="@drawable/prasad"
+               android:layout_gravity="center_horizontal" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textAppearance="?android:attr/textAppearanceLarge"
+               android:text="Prasad N R"
+               android:id="@+id/textView14"
+               android:layout_gravity="center_horizontal" />
+
+           <TextView
+
+               android:layout_marginLeft = "25dp"
+               android:layout_marginRight = "25dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textAppearance="?android:attr/textAppearanceSmall"
+               android:text="\nPrasad's interest lies in creating value and empowering people for the common good. His interests also include disrupting industries with radical innovations (He is working on it). He has some experience in programming and is improving on it. One of his projects includes unmanned ground vehicle project IGVC (http://www.igvc.org/design/2014/12.pdf) where MSRIT was placed 11th in the competition internationally.\n\n"
+               android:id="@+id/textView14"
+               android:autoLink="web"
+               android:layout_gravity="center_horizontal"
+               android:gravity="center"/>
+       </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
