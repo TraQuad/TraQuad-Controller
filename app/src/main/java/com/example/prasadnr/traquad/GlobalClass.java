@@ -21,6 +21,7 @@
 package com.example.prasadnr.traquad;
 
 import android.app.Application;
+import android.bluetooth.BluetoothSocket;
 import android.widget.Toast;
 
 /**
@@ -34,6 +35,33 @@ public class GlobalClass extends Application {
     public int realWidth = 960;
     public int realHeight = 540;
     public String IPaddressNew = "192.168.43.135";
+    public String sendString = "1000150015001500"; //FORMAT: Throttle, Pitch, Roll, Yaw
+    public BluetoothSocket bluetoothSocket;
+    public int radioMode = 2;
+
+    public void setRadioMode(int mode){
+        radioMode = mode;
+    }
+
+    public int getRadioMode(){
+        return radioMode;
+    }
+
+    public void setBluetoothSocket(BluetoothSocket socket){
+        bluetoothSocket = socket;
+    }
+
+    public BluetoothSocket getBluetoothSocket(){
+        return bluetoothSocket;
+    }
+
+    public String getSendString(){
+        return sendString;
+    }
+
+    public void setSendString(String string){
+        sendString = string;
+    }
 
     public int getRealWidth() {
 

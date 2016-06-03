@@ -20,13 +20,17 @@
 
 package com.example.prasadnr.traquad;
 
+import android.content.pm.ActivityInfo;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.content.Context;
@@ -43,14 +47,34 @@ public class Setting extends ActionBarActivity{
     EditText IPtext;
     Button setIPbutton;
     String stringIP="";
+    final String TAG = "Traquad";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
 
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         setIPbutton = (Button) findViewById(R.id.button8);
         IPtext = (EditText)findViewById(R.id.editText3);
+        Button setModeButton = (Button) findViewById(R.id.setMode);
+
+        setModeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radioMode);
+                int selection = radioGroup.getCheckedRadioButtonId();
+                RadioButton radioButton = (RadioButton) findViewById(selection);
+                CharSequence modeNumberCharSequence = radioButton.getText();
+                String modeNumberString = String.valueOf(modeNumberCharSequence);
+                String radioModeString = modeNumberString.replaceAll("[^0-9]", "");
+                int modeNumber = Integer.parseInt(radioModeString);
+                GlobalClass globalVariable = (GlobalClass) getApplicationContext();
+                globalVariable.setRadioMode(modeNumber);
+                Log.e(TAG, String.valueOf(modeNumber));
+            }
+        });
 
         setIPbutton.setOnClickListener(new View.OnClickListener() {
 

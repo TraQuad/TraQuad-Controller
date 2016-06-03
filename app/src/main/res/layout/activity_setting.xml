@@ -35,7 +35,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="IPaddress"
         android:id="@+id/textViewIP"
-        android:layout_below="@+id/editText3"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
     <EditText
@@ -44,7 +44,7 @@
         android:inputType="text"
         android:ems="10"
         android:id="@+id/editText3"
-        android:layout_below="@+id/button8"
+        android:layout_above="@+id/textViewIP"
         android:layout_centerHorizontal="true" />
 
     <Button
@@ -52,6 +52,50 @@
         android:layout_height="wrap_content"
         android:text="Set IP address"
         android:id="@+id/button8"
+        android:layout_above="@+id/editText3"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Pro-Joypad mode:"
+        android:id="@+id/modeNumberTitle"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <RadioGroup
+        android:id="@+id/radioMode"
+        android:layout_below = "@id/modeNumberTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+    <RadioButton
+        android:id="@+id/radioMode1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mode 1"
+        android:layout_toEndOf="@id/radioMode1"
+        android:layout_alignParentEnd="true"
+        android:checked="false" />
+
+    <RadioButton
+        android:id="@+id/radioMode2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mode 2"
+        android:checked="true"
+        android:layout_toEndOf="@+id/modeNumberTitle"
+        android:layout_above="@+id/setMode" />
+
+    </RadioGroup>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Mode"
+        android:id="@+id/setMode"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
