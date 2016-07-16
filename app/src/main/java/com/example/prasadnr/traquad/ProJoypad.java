@@ -260,11 +260,30 @@ public class ProJoypad extends AppCompatActivity {
                         int rollPWM = 1000 + (1000 * (xRightCorner - (widthScreen - arenaLength))) / totalRangeLength;
                         int throttlePWM = 1000 + (1000 * ((heightScreen - smallStickLength - statusBarHeight) - yRightCorner)) / totalRangeLength;
 
+                    GlobalClass globalClass = (GlobalClass) getApplicationContext();
+                    if(globalClass.getLeftInversion()==1)
+                    {
+                        pitchPWM = 3000 - pitchPWM;
+                    }
+                    if(globalClass.getRightInversion()==1)
+                    {
+                        throttlePWM = 3000 - throttlePWM;
+                    }
+
                     if(radioMode==2) {
                         yawPWM = 1000 + (1000 * xLeftCorner) / totalRangeLength;
                         throttlePWM = 1000 + (1000 * ((heightScreen - smallStickLength - statusBarHeight) - yLeftCorner)) / totalRangeLength;
                         rollPWM = 1000 + (1000 * (xRightCorner - (widthScreen - arenaLength))) / totalRangeLength;
                         pitchPWM = 1000 + (1000 * ((heightScreen - smallStickLength - statusBarHeight) - yRightCorner)) / totalRangeLength;
+
+                        if(globalClass.getLeftInversion()==1)
+                        {
+                            throttlePWM = 3000 - throttlePWM;
+                        }
+                        if(globalClass.getRightInversion()==1)
+                        {
+                            pitchPWM = 3000 - pitchPWM;
+                        }
                     }
 
                     String throttleString = String.valueOf(throttlePWM);
@@ -415,11 +434,30 @@ public class ProJoypad extends AppCompatActivity {
                     int rollPWM = 1000 + (1000 * (xRightCorner - (widthScreen - arenaLength))) / totalRangeLength;
                     int throttlePWM = 1000 + (1000 * ((heightScreen - smallStickLength - statusBarHeight) - yRightCorner)) / totalRangeLength;
 
+                    GlobalClass globalClass = (GlobalClass) getApplicationContext();
+                    if(globalClass.getLeftInversion()==1)
+                    {
+                        pitchPWM = 3000 - pitchPWM;
+                    }
+                    if(globalClass.getRightInversion()==1)
+                    {
+                        throttlePWM = 3000 - throttlePWM;
+                    }
+
                     if(radioMode==2) {
                         yawPWM = 1000 + (1000 * xLeftCorner) / totalRangeLength;
                         throttlePWM = 1000 + (1000 * ((heightScreen - smallStickLength - statusBarHeight) - yLeftCorner)) / totalRangeLength;
                         rollPWM = 1000 + (1000 * (xRightCorner - (widthScreen - arenaLength))) / totalRangeLength;
                         pitchPWM = 1000 + (1000 * ((heightScreen - smallStickLength - statusBarHeight) - yRightCorner)) / totalRangeLength;
+
+                        if(globalClass.getLeftInversion()==1)
+                        {
+                            throttlePWM = 3000 - throttlePWM;
+                        }
+                        if(globalClass.getRightInversion()==1)
+                        {
+                            pitchPWM = 3000 - pitchPWM;
+                        }
                     }
 
                     String throttleString = String.valueOf(throttlePWM);
@@ -570,11 +608,30 @@ public class ProJoypad extends AppCompatActivity {
                     int rollPWM = 1000 + (1000 * (xRightCorner - (widthScreen - arenaLength))) / totalRangeLength;
                     int throttlePWM = 1000 + (1000 * ((heightScreen - smallStickLength - statusBarHeight) - yRightCorner)) / totalRangeLength;
 
+                    GlobalClass globalClass = (GlobalClass) getApplicationContext();
+                    if(globalClass.getLeftInversion()==1)
+                    {
+                        pitchPWM = 3000 - pitchPWM;
+                    }
+                    if(globalClass.getRightInversion()==1)
+                    {
+                        throttlePWM = 3000 - throttlePWM;
+                    }
+
                     if(radioMode==2) {
                         yawPWM = 1000 + (1000 * xLeftCorner) / totalRangeLength;
                         throttlePWM = 1000 + (1000 * ((heightScreen - smallStickLength - statusBarHeight) - yLeftCorner)) / totalRangeLength;
                         rollPWM = 1000 + (1000 * (xRightCorner - (widthScreen - arenaLength))) / totalRangeLength;
                         pitchPWM = 1000 + (1000 * ((heightScreen - smallStickLength - statusBarHeight) - yRightCorner)) / totalRangeLength;
+
+                        if(globalClass.getLeftInversion()==1)
+                        {
+                            throttlePWM = 3000 - throttlePWM;
+                        }
+                        if(globalClass.getRightInversion()==1)
+                        {
+                            pitchPWM = 3000 - pitchPWM;
+                        }
                     }
 
                     String throttleString = String.valueOf(throttlePWM);
@@ -778,6 +835,25 @@ public class ProJoypad extends AppCompatActivity {
             webView.setWebViewClient(new WebViewClient() {
                 public void onPageFinished(WebView view, String url) {
                     pDialog.dismiss();
+                }
+            });
+
+            Button leftVerticalInversion = (Button) findViewById(R.id.left);
+            Button rightVerticalInversion = (Button) findViewById(R.id.right);
+
+            leftVerticalInversion.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    GlobalClass globalClass = (GlobalClass) getApplicationContext();
+                    globalClass.toggleLeftInversion();
+                }
+            });
+
+            rightVerticalInversion.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    GlobalClass globalClass = (GlobalClass) getApplicationContext();
+                    globalClass.toggleRightInversion();
                 }
             });
 

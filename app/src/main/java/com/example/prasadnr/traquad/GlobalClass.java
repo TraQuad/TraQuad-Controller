@@ -39,6 +39,32 @@ public class GlobalClass extends Application {
     public BluetoothSocket bluetoothSocket;
     public int radioMode = 2;
 
+    public int leftInversion = 0, rightInversion = 0;
+
+    public void toggleLeftInversion(){
+        if(leftInversion==0) {
+            leftInversion = 1;
+        }else{
+            leftInversion = 0;
+        }
+    }
+
+    public int getLeftInversion(){
+        return leftInversion;
+    }
+
+    public void toggleRightInversion(){
+        if(rightInversion==0) {
+            rightInversion = 1;
+        }else{
+            rightInversion = 0;
+        }
+    }
+
+    public int getRightInversion(){
+        return rightInversion;
+    }
+
     public void setRadioMode(int mode){
         radioMode = mode;
     }

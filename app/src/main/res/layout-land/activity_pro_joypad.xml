@@ -83,7 +83,25 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Still in experimental stage"
         android:id="@+id/textView24"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/right"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Left Vertical Inversion"
+        android:id="@+id/left"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Right Vertical Inversion"
+        android:id="@+id/right"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
